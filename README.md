@@ -1,8 +1,6 @@
 # SmartCalc v2.0
 
-Implementation of SmartCalc v2.0.
-
-The russian version of the task can be found in the repository.
+Implementation of SmartCalc
 
 ## Contents
 
@@ -12,43 +10,7 @@ The russian version of the task can be found in the repository.
    2.1. [Information](#information)
 3. [Chapter III](#chapter-iii) \
    3.1. [Part 1](#part-1-implementation-of-smartcalc-v20) \
-   3.2. [Part 2](#part-2-bonus-credit-calculator) \
-   3.3. [Part 3](#part-3-bonus-deposit-calculator)
 
-
-## Chapter I
-
-![smartcalcv2.0](misc/images/smartcalcv2.0.PNG)
-
-Planet Earth, 20 August 1983.
-
-Chris has put a paper cup of coffee on the table beside you, and that wakes you up.
-
-*"Pure black Americano, I hear you like it. It'll help you wake up."*
-
-*"Oh yes, I really need it, thank you. Where were we?"* you asked as you sipped your hot coffee.
-
-*"Have you finished the basic logic for the calculator?"*
-
-*"Ah, it's still a work in progress. The meeting with Steve is tomorrow?"*
-
-*"That's right. If we can show him some basic arithmetic operations with a refactored program structure, I think he'll like it.*
-
-For more than a week now, you've been spending your evenings helping Chris Espinosa rewrite an object-oriented calculator. His latest version, using the standard structured approach, turned out not to be flexible and extensible enough for Steve Jobs, who was bursting with ideas. So you and Chris decided to try the emerging object-oriented programming paradigm in the young C++ language to solve these problems. Of course, learning new technologies caused some... difficulties, but there is hope that it will not be necessary to completely rewrite the calculator for the eighth time.
-
-*"Well, let's speed things up."*
-
-*"By the way, I met a developer from Norway the other day: Torkve or Trykve, I can't remember.* \
-*Anyway, he told me about a scheme for organising data and application logic that allows us to change some components very flexibly and quickly. For example, we can completely separate the interface from the rest of the code, you know? And if Steve doesn't like something in the interface, it can be changed quickly and safely. We wouldn't even have to rewrite the tests for the rest of the logic."*
-
-*"Sounds like exactly what we need! I'm all ears."*
-
-## Introduction
-
-In this project, you'll need to implement an extended version of the standard calculator in C++ using the object-oriented programming paradigm, implementing the same functions as the application previously developed in the SmartCalc v1.0 project. In addition to basic arithmetic operations such as add/subtract and multiply/divide, the calculator needs to be able to calculate arithmetic expressions by following the order, as well as some mathematical functions (sine, cosine, logarithm, etc.). Besides calculating expressions, it should also support the use of the variable _x_ and the graphing of the corresponding function. As for other improvements, you could consider a credit and deposit calculator.
-
-
-## Chapter II
 
 ## Information
 
@@ -68,8 +30,6 @@ The model stores and accesses the main data, performs operations on requests def
 A controller is a thin macro component that performs model modifications. It is used to generate requests to the model. In code, it looks like a kind of "facade" for the model, that is, a set of methods that already work directly with the model. It is called thin because the ideal controller contains no additional logic other than calling one or more methods of the model. The controller acts as a link between the interface and the model. This allows the model to be completely encapsulated from the representation. This separation is helpful in that it allows the view code to know nothing about the model code and to address only the controller, whose interface of the provided functions is unlikely to change much. The model, on the other hand, can change significantly, and if you "move" to other algorithms, technologies, or even programming languages in the model, only a small piece of code in the controller directly related to the model needs to be changed. Otherwise, it would probably be necessary to rewrite a significant part of the interface code, as it would depend very much on the implementation of the model. So when the user interacts with the interface, they call controller methods that modify the model.
 
 The view contains all the code associated with the programme interface. An ideal interface code should not contain any business logic. It just provides the form for interacting with the user.
-
-![](misc/images/MVC-Process.png)
 
 
 ## Chapter III
@@ -128,16 +88,3 @@ You need to implement the SmartCalc v2.0:
       | Computes natural logarithm | ln(x) |
       | Computes common logarithm | log(x) |
 
-## Part 2. Bonus. Credit calculator
-
-Provide a special mode "credit calculator" (you can take banki.ru and calcus.ru as an example):
-- Input: total credit amount, term, interest rate, type (annuity, differentiated);
-- Output: monthly payment, overpayment on credit, total payment.
-
-## Part 3. Bonus. Deposit calculator
-
-Provide a special mode "deposit profitability calculator" (you can take banki.ru and calcus.ru as an example):
-- Input: deposit amount, deposit term, interest rate, tax rate, periodicity of payments, capitalization of interest, replenishments list, partial withdrawals list;
-- Output: accrued interest, tax amount, deposit amount by the end of the term.
-
-💡 [Tap here](https://forms.yandex.ru/cloud/64181abec769f101d44293de/) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.
