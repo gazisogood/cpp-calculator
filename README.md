@@ -1,4 +1,4 @@
-# SmartCalc v2.0
+# SmartCalc
 
 Implementation of SmartCalc
 
@@ -9,7 +9,7 @@ Implementation of SmartCalc
 2. [Chapter II](#chapter-ii) \
    2.1. [Information](#information)
 3. [Chapter III](#chapter-iii) \
-   3.1. [Part 1](#part-1-implementation-of-smartcalc-v20) \
+   3.1. [Part 1](#part-1-implementation-of-smartcalc-v20)
 
 
 ## Information
